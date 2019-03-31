@@ -1,4 +1,8 @@
-load 'fibonacci.rb'
+# load 'fibonacci.rb'
+# require_relative 'fibonacci.rb'
+# require './fibonacci.rb'
+require './fibonacci'
+
 require 'benchmark'
 
 puts "------------- n is 10 -------------"
@@ -28,6 +32,7 @@ Benchmark.bm(20) do |x| # bmbm
   x.report("fib_fast_3") { fib_fast_3(n) }
   x.report("fib_fast_4") { fib_fast_4(n) }
   x.report("fib_fast_5") { fib_fast_5(n) }
-  x.report("fib_fast_6") { fib_fast_6(n) }
 end
 puts "------------- END -------------"
+puts "#{__FILE__}"
+puts "#{$0}"
