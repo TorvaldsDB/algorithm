@@ -26,6 +26,16 @@ def fib_fast_1(n) # O(n)
   b
 end
 
+def fib_fast_1(n) # O(n)
+  a, b = 0, 1
+  return a if n == 0
+  return b if n == 1
+  2.upto(n).each do |i|
+    a, b = b, a + b
+  end
+  b
+end
+
 # 迭代加法
 def fib_fast_2(n)
   return n if n == 0 || n == 1
