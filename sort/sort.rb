@@ -19,3 +19,24 @@ def selection(arr)
   end
   arr
 end
+
+# def insertion(arr)
+#   for i in 1...(arr.length)
+#       j = i
+#       while j > 0 && arr[j-1] > arr[j]
+#         arr[j], arr[j - 1] = arr[j - 1], arr[j]
+#         j = j - 1
+#       end
+#   end
+#   arr
+# end
+
+def insertion(arr)
+  1.upto(arr.length - 1) do |i|
+      while i > 0 && arr[i-1] > arr[i]
+        arr[i], arr[i - 1] = arr[i - 1], arr[i]
+        --i
+      end
+  end
+  arr
+end
